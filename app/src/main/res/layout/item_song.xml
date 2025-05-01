@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        
+        <!-- Song Title -->
+        <TextView
+            android:id="@+id/songTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/deleteButton"
+            android:text="Song Title"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:maxLines="1" />
+        
+        <!-- Play Button -->
+        <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/songTitleTextView"
+            android:layout_marginTop="8dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_play_arrow"
+            android:contentDescription="Play"/>
+        
+        <!-- Pause Button -->
+        <ImageButton
+            android:id="@+id/pauseButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_toStartOf="@id/playButton"
+            android:layout_below="@id/songTitleTextView"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_pause"
+            android:contentDescription="Pause"
+            android:visibility="gone" />
+            
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_toStartOf="@id/pauseButton"
+            android:layout_below="@id/songTitleTextView"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_delete"
+            android:contentDescription="Delete" />
+            
+    </RelativeLayout>
+    
+</com.google.android.material.card.MaterialCardView>
